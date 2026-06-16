@@ -16,6 +16,46 @@ qual o faturamento total da empresa.
 
 *******************************************************************************/
 #include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+
+typedef struct Data {
+		int dia;
+		int mes;
+		int ano;
+} Data;
+
+
+typedef struct Cliente {
+    char nome[50];
+    int CPF[50];
+    int telefone[15];
+    Data dataNascimento;
+    int numeroCartao[20];
+    char chavePix[30];
+} Cliente;
+
+
+typedef struct Vendas {
+    Cliente cliente[50];
+    float valorTotalVenda;
+    int formaPagamento;
+    int qtdeParcelas;
+    Data dataVenda;
+    char observacao[50];
+} Vendas;
+
+
+typedef struct Parcela {
+    int idParcela;
+    int idVenda;
+    int numeroDaParcela;
+    float valorDaParcela;
+    Data dataVencimento;
+    Data dataRecebimento;
+    char situacaoDaParcela;
+} Parcela;
+
 
 int validarData ( Data dt );
 int validarData ( Data dt ){
