@@ -424,6 +424,27 @@ void exibirParcela(Parcela p) {
 int main(){
     int menu = 0;
 
+    // PRÉ-CADASTRO DE CLIENTES TESTE 
+    strcpy(cliente[0].nome, "Amanda Correa");
+    strcpy(cliente[0].CPF, "1235016950"); 
+    strcpy(cliente[0].telefone, "043991231517");
+    cliente[0].dataNascimento.dia = 21;
+    cliente[0].dataNascimento.mes = 10;
+    cliente[0].dataNascimento.ano = 2007;
+    strcpy(cliente[0].numeroCartao, "4000123456789010");
+    strcpy(cliente[0].chavePix, "amanda@gmail.com");
+    qtdClientes++;
+    
+    strcpy(cliente[1].nome, "Giovanni Marin");
+    strcpy(cliente[1].CPF, "12332145678"); 
+    strcpy(cliente[1].telefone, "019230919303");
+    cliente[1].dataNascimento.dia = 6;
+    cliente[1].dataNascimento.mes = 7;
+    cliente[1].dataNascimento.ano = 2008;
+    strcpy(cliente[1].numeroCartao, "192939129091023");
+    strcpy(cliente[1].chavePix, "marin@gmail.com");
+    qtdClientes++;
+    
     do {
         printf("\n=============================================================\n");
         printf("                     PAINEL DE COMPRA E VENDAS\n");
